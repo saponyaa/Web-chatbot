@@ -12,20 +12,22 @@ It uses **Qdrant** as a vector database and **FastAPI** as the backend. The chat
 - Frontend with responsive chat UI 
 
 ## Project Structure
-project/
+web_chatbot/
 │
 ├── backend/
-│   ├── app.py            # FastAPI app
-│   ├── document_parser.py   # Qdrant database logic
-│   ├── embeddings.py     # Embedding model
-│   ├── qdrant_utils.py # File parsing logic
-│   └── requirements.txt  # Python dependencies
-├── frontend/
-│   ├── index.html        # Chatbot UI
-│   ├── styles.css        # Styling
-│   └── chatbot.js        # Chatbot logic
+│   ├── app.py
+│   ├── embeddings.py
+│   ├── qdrant_utils.py
+│   ├── document_parser.py 
 │
-└── README.md
+├── frontend/              
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│
+├── README.md
+├── requirements.txt        
+
 
 ## Setup Instructions
  
