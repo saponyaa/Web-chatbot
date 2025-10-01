@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Chat Button -->
+  <button id="chat-button" class="chatbot-btn" aria-label="Open chat">
+    <!-- Chat bubble icon with 3 dots -->
+    <svg xmlns="http://www.w3.org/2000/svg" 
+         viewBox="0 0 24 24" 
+         width="28" 
+         height="28" 
+         fill="white">
+      <path d="M12 3C6.48 3 2 6.92 2 12c0 2.4 1.05 4.55 2.8 6.1V21l3.2-1.6c1.2.33 2.47.5 4 .5 5.52 0 10-3.92 10-9s-4.48-9-10-9zm-4 9a1 1 0 110-2 1 1 0 010 2zm4 0a1 1 0 110-2 1 1 0 010 2zm4 0a1 1 0 110-2 1 1 0 010 2z"/>
+    </svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div id="chat-window" class="hidden" role="dialog" aria-label="Chatbot window">
+    <div class="minimized-label hidden">💬 Chatbot</div>
+
+    <!-- Header -->
+    <div id="chat-header">
+      <span>Chatbot</span>
+      <div class="chat-header-buttons">
+        <button id="minimize-chat" aria-label="Minimize chat">−</button> <!-- U+2212 -->
+        <button id="close-chat" aria-label="Close chat">✖</button>
+      </div>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="chat-messages" aria-live="polite" aria-atomic="false"></div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="hidden">🤖 Bot is typing...</div>
+
+    <!-- Input Area -->
+    <div id="chat-input-area">
+      <input 
+        type="text" 
+        id="chat-input" 
+        placeholder="Type your question..." 
+        aria-label="Type your message"
+        autocomplete="off"
+      />
+      <input type="file" id="file-input" hidden aria-label="Upload file" />
+      <button id="file-button" aria-label="Upload file">📎</button>
+      <button id="send-button" aria-label="Send message">➤</button>
+    </div>
+  </div>
+
+  <!-- Chatbot Script -->
+  <script src="chatbot.js"></script>
+</body>
+</html>
