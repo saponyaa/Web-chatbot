@@ -59,6 +59,10 @@ env
 QDRANT_URL="your_qdrant_url"
 QDRANT_API_KEY="your_api_key"
 
+Also replace them in qdrant_utils.py
+    "url=QDRANT_URL,
+    api_key=QDRANT_API_KEY" with your actual url and api_key.
+
 *5. Run the backend:
 
 bash
