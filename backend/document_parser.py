@@ -31,7 +31,6 @@ def extract_csv(file):
 # --- TXT ---
 def extract_txt(file):
     text = file.file.read().decode("utf-8")  # decode bytes to string
-    # Optional: split into 500-character chunks
     chunk_size = 500
     chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
     return [c.strip() for c in chunks if c.strip()]

@@ -19,7 +19,7 @@ def insert_vectors(vector, payload):
     client.upsert(
         collection_name=collection_name,
         points=[{
-            "id": str(uuid.uuid4()),  # <-- generate a unique string ID
+            "id": str(uuid.uuid4()),  
             "vector": vector,
             "payload": payload
         }]
@@ -31,5 +31,5 @@ def search_vectors(vector, top=3, threshold=0.4):
         query_vector=vector,
         limit=top
     )
-    # Only keep results above similarity threshold
+    
     return [res for res in results if res.score >= threshold]

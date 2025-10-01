@@ -15,7 +15,7 @@ app = FastAPI(title="Web Chatbot Backend")
 # Allow frontend requests
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # ⚠️ Restrict to your frontend domain in production
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

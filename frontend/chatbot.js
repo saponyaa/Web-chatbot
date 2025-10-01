@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Open chat
   // -----------------------------
   chatButton.addEventListener("click", () => {
-    chatWindow.style.display = "block";        // show chat window
-    chatWindow.classList.remove("minimized");  // reset minimize state
-    chatButton.style.display = "none";         // hide chat button
+    chatWindow.style.display = "block";        
+    chatWindow.classList.remove("minimized");  
+    chatButton.style.display = "none";         
     minimizedLabel?.classList.add("hidden");
   });
 
@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Close chat (fully fixed)
   // -----------------------------
   closeChat.addEventListener("click", (e) => {
-    e.stopPropagation();                 // prevent window click restore
-    chatWindow.style.display = "none";   // fully hide chat window
-    chatButton.style.display = "block";  // show chat button
+    e.stopPropagation();                 
+    chatWindow.style.display = "none";   
+    chatButton.style.display = "block";  
   });
 
   // -----------------------------
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // -----------------------------
-  // Minimize chat (unchanged)
+  // Minimize chat 
   // -----------------------------
   minimizeChat.addEventListener("click", (e) => {
     chatWindow.classList.toggle("minimized");
